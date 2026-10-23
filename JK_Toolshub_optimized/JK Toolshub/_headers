@@ -1,0 +1,9 @@
+# Netlify headers: caching for static assets (filenames are not hashed, so keep it to 1 day)
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
